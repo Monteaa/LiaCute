@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Month Anniversary | Monte Love Lia More</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Hero */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://media.discordapp.net/attachments/839370182634897418/1445419138314014884/pPC9T8J.png?ex=693046f9&is=692ef579&hm=750e531cbfd5e2f9ed452541671bacae216f17f8e5d316d5a28b9860d5a3eb78&=&format=webp&quality=lossless&width=550&height=291');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+        
+        .couple-names {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #ffccd5;
+            margin: 15px 0;
+        }
+        
+        .anniversary-countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 100px;
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 50px;
+            color: #d63384;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #d63384;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .timeline-content h3 {
+            color: #d63384;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 4px solid #d63384;
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -17px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -17px;
+        }
+        
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .photo-frame {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 250px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .photo-frame:hover {
+            transform: translateY(-10px);
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .photo-frame:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Love Notes */
+        .notes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .note {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .note:hover {
+            transform: translateY(-10px);
+        }
+        
+        .note i {
+            font-size: 2rem;
+            color: #d63384;
+            margin-bottom: 15px;
+        }
+        
+        .note h3 {
+            margin-bottom: 15px;
+            color: #d63384;
+        }
+        
+        /* Memory Game */
+        .game-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .card {
+            height: 120px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        
+        .card.flipped {
+            transform: rotateY(180deg);
+            background: white;
+            color: #333;
+        }
+        
+        .card.matched {
+            background: #4CAF50;
+            cursor: default;
+        }
+        
+        .game-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .reward-notification {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        /* Surprise Section */
+        .surprise {
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 60px 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .surprise button {
+            background: #d63384;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .surprise button:hover {
+            background: #c22570;
+            transform: scale(1.05);
+        }
+        
+        .hidden-letter {
+            max-width: 700px;
+            margin: 30px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        
+        .hidden-letter h3 {
+            color: #d63384;
+            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+        }
+        
+        /* Hidden Reward Message */
+        .hidden-reward {
+            max-width: 700px;
+            margin: 30px auto;
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            display: none;
+            border: 3px solid #d63384;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hidden-reward::before {
+            content: '🎉 SPECIAL REWARD 🎉';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #d63384;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .hidden-reward-content {
+            margin-top: 40px;
+        }
+        
+        .hidden-reward h3 {
+            color: #d63384;
+            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+        
+        .heart {
+            color: #d63384;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            5% { transform: scale(1.3); }
+            10% { transform: scale(1.1); }
+            15% { transform: scale(1.4); }
+            50% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Confetti effect */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            top: 0;
+            opacity: 0;
+            z-index: 9999;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .couple-names {
+                font-size: 2.5rem;
+            }
+            
+            .anniversary-countdown {
+                flex-wrap: wrap;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 18px !important;
+            }
+            
+            .game-board {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Hero -->
+    <header>
+        <div class="hero-content">
+            <h1>Happy One Month, My Love!</h1>
+            <div class="couple-names">Monte Love Lia More</div>
+            <p>Celebrating our first beautiful month together, and counting every magical moment we've shared.</p>
+            <p><strong>Countdown to our 1-month anniversary:</strong></p>
+            <div class="anniversary-countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Our Story Timeline -->
+    <section id="our-story">
+        <div class="container">
+            <h2 class="section-title">Our First Month Together</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>The Day We Met</h3>
+                        <p>You sent me a sticker on Discord ! Honestly it is magical to think we met from a random Val LFG</p>
+                        <span>October 25, 2025</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Our First Long Yapppp</h3>
+                        <p>When we talked for hours about everything and nothing. I loved how easy it felt to be with you right from the start.</p>
+                        <span>October 26, 2025</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Our First I Miss you</h3>
+                        <p>You told me you miss me and I felt so happy to hear that. I miss you too my love.</p>
+                        <span>November 6, 2025</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>The Offical I Love you</h3>
+                        <p>The happiest day of my life so far - when you agreed to be mine. My heart has been full ever since.</p>
+                        <span>November 10, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">My Pretty Girl</h2>
+            <div class="gallery">
+                <div class="photo-frame">
+                    <img src="https://media.discordapp.net/attachments/839370182634897418/1443188866457534485/DA0870A0-0EF7-46E0-8B6F-3DF3EBF69359.jpg?ex=693012de&is=692ec15e&hm=21aa824cbcb0a6d2e80e7c59d955ef0164ddd86fd1bebf6d7756c85baf172199&=&format=webp&width=544&height=968" alt="Romantic sunset">
+                </div>
+                <div class="photo-frame">
+                    <img src="https://cdn.discordapp.com/attachments/839370182634897418/1445422277150904574/0BC2CFD1-EE9B-4876-8D41-4829CDB0824B.jpg?ex=693049e5&is=692ef865&hm=e9a5768e545fcd74c69f16822f022324ac81e44061e96ad59119acc10b3c7185&" alt="Couple silhouette">
+                </div>
+                <div class="photo-frame">
+                    <img src="https://cdn.discordapp.com/attachments/839370182634897418/1445422283916054579/FE979665-C2CB-424A-847C-E1677115DD14.jpg?ex=693049e7&is=692ef867&hm=7ca03856437dbc18b1bfafcb04aa790d532b883204c1e78b9fd0af47d72d3417&" alt="Beautiful smile">
+                </div>
+                <div class="photo-frame">
+                    <img src="https://media.discordapp.net/attachments/839370182634897418/1445422942539350016/7A877032-4D7D-43CE-B1B6-267FD81528B1.jpg?ex=69304a84&is=692ef904&hm=03ba93e4dd5cc8dc93a696b0a2ed6140c2c206e90d91e6d39eb0c78f76a81fd8&=&format=webp&width=544&height=968" alt="Romantic couple">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Notes -->
+    <section id="love-notes">
+        <div class="container">
+            <h2 class="section-title">For My Lia</h2>
+            <div class="notes-container">
+                <div class="note">
+                    <i class="fas fa-heart"></i>
+                    <h3>You Brighten My World</h3>
+                    <p>In just one month, you've brought so much light into my life. Every day with you feels like a beautiful adventure.</p>
+                </div>
+                <div class="note">
+                    <i class="fas fa-star"></i>
+                    <h3>My Favorite Person</h3>
+                    <p>Of all the people I've met, you're the one who makes me smile the most. I can't wait for all our future moments together.</p>
+                </div>
+                <div class="note">
+                    <i class="fas fa-moon"></i>
+                    <h3>My Dream Girl</h3>
+                    <p>Every night I fall asleep thinking of you, and every morning I wake up excited to talk to you again. You're everything I've hoped for.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory Game -->
+    <section id="memory-game">
+        <div class="container">
+            <h2 class="section-title">Our Memory Game</h2>
+            <div class="game-container">
+                <div class="game-info">
+                    <div>Moves: <span id="moves">0</span></div>
+                    <div>Matches: <span id="matches">0</span>/8</div>
+                    <div>Time: <span id="timer">0</span>s</div>
+                </div>
+                <div class="game-board" id="gameBoard">
+                    <!-- Cards will be generated by JavaScript -->
+                </div>
+                <button id="restartGame" style="margin-top: 20px; padding: 10px 20px; background: #d63384; color: white; border: none; border-radius: 5px; cursor: pointer;">Restart Game</button>
+                
+                <!-- Reward Notification -->
+                <div class="reward-notification" id="rewardNotification">
+                    <i class="fas fa-gift" style="color: #d63384; font-size: 1.5rem; margin-right: 10px;"></i>
+                    <strong>Congratulations! You've unlocked a secret message!</strong>
+                    <p>Scroll down to see your special reward below the love letter section.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Surprise Section -->
+    <section id="surprise">
+        <div class="container">
+            <div class="surprise">
+                <h2 class="section-title">A Special Message</h2>
+                <p>Click the button below to reveal a special message just for you 67777</p>
+                <button id="revealButton">Open My Love Letter</button>
+                <div class="hidden-letter" id="loveLetter">
+                    <h3>My Love My Wifey - Lia,</h3>
+                    <p>Happy one-month anniversary, my love! It's hard to believe it's only been a month since we started dating. But I just wanted you to know that I love you so so much</p>
+                    <p>I love how we can talk about anything, how you make me laugh, and how comfortable I feel with you. </p>
+                    <p>These past few weeks have been some of the best day in 2025</p>
+                    <p>Thank you for picking me as your partner. Here's to our first month and to many, many more to come.</p>
+                    <p>With all my love,</p>
+                    <p style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; margin-top: 20px;">Monte</p>
+                </div>
+                
+                <!-- Hidden Reward Message (appears after completing memory game) -->
+                <div class="hidden-reward" id="hiddenReward">
+                    <div class="hidden-reward-content">
+                        <h3>Oh wow you actually finished the game, I am so proud of you</h3>
+                        <p>My cute and pretty Lia,</p>
+                        <p>At this point I am kind of running out of ideas and topic to make this more special, but I will try my best... But here is your reward</p>
+                        <p style="text-align: center; font-size: 1.2rem; margin: 20px 0; padding: 15px; background: #fff; border-radius: 10px; border-left: 4px solid #d63384;">
+                            <strong>FREE MWAH CUPON.</strong><br>
+                            Use it when you want to see me in person.
+                        </p>
+                        <p>I know we've only been together for a month, but I can honestly say I am very satisfied with the relationship we have. When we play Valorant together, when we watch movies, when we just talk for hours... every moment with you feels right.</p>
+                        <p>I really look forward to celebrating the next month with you and the one after that</p>
+                        <p>Thank you for being my girlfriend,I love you more than words can express. I love you so so much. I am a lucky man to have you as my partner.</p>
+                        <p style="text-align: center; margin-top: 30px;">
+                            <span style="font-family: 'Dancing Script', cursive; font-size: 2rem; color: #d63384;">Forever yours,</span><br>
+                            <span style="font-family: 'Dancing Script', cursive; font-size: 2.5rem;">Monte</span>
+                        </p>
+                        <p style="text-align: center; margin-top: 20px; font-style: italic; color: #666;">
+                            P.S. 67777 and I love you more  
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Made with <span class="heart">❤️</span> by Monte for his beautiful Lia</p>
+            <p>Happy One Month Anniversary, my love! Here's to our beginning.</p>
+            <p style="margin-top: 20px; font-size: 0.9rem;">© <span id="current-year">2025</span> | Monte & Lia's Love Story</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer - Set to end at the start of 7/12/2025
+        const targetDate = new Date(2025, 11, 7, 0, 0, 0); // December 7, 2025 (Month is 0-indexed: 11 = December)
+        
+        function updateCountdown() {
+            const now = new Date();
+            const timeDiff = targetDate - now;
+            
+            // If the target date has passed
+            if (timeDiff <= 0) {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+                return;
+            }
+            
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+        
+        // Memory Game
+        const memoryCards = [
+            '❤️', '🌸', '🌟', '🎂',
+            '🌹', '💑', '🎉', '🎁',
+            '❤️', '🌸', '🌟', '🎂',
+            '🌹', '💑', '🎉', '🎁'
+        ];
+        
+        let flippedCards = [];
+        let matchedPairs = 0;
+        let moves = 0;
+        let gameStarted = false;
+        let startTime = 0;
+        let timerInterval;
+        let gameCompleted = false;
+        
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+        
+        function initGame() {
+            const gameBoard = document.getElementById('gameBoard');
+            gameBoard.innerHTML = '';
+            
+            const shuffledCards = shuffleArray([...memoryCards]);
+            
+            shuffledCards.forEach((symbol, index) => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+                card.dataset.symbol = symbol;
+                card.dataset.index = index;
+                card.innerHTML = '<span style="display:none;">' + symbol + '</span>';
+                card.addEventListener('click', flipCard);
+                gameBoard.appendChild(card);
+            });
+            
+            // Reset game stats
+            flippedCards = [];
+            matchedPairs = 0;
+            moves = 0;
+            gameStarted = false;
+            startTime = 0;
+            gameCompleted = false;
+            
+            document.getElementById('moves').textContent = moves;
+            document.getElementById('matches').textContent = matchedPairs;
+            document.getElementById('timer').textContent = '0';
+            
+            // Hide reward notification
+            document.getElementById('rewardNotification').style.display = 'none';
+            
+            clearInterval(timerInterval);
+        }
+        
+        function flipCard() {
+            if (flippedCards.length >= 2 || this.classList.contains('flipped') || this.classList.contains('matched')) {
+                return;
+            }
+            
+            // Start timer on first flip
+            if (!gameStarted) {
+                gameStarted = true;
+                startTime = Date.now();
+                timerInterval = setInterval(updateTimer, 1000);
+            }
+            
+            this.classList.add('flipped');
+            this.querySelector('span').style.display = 'block';
+            flippedCards.push(this);
+            
+            if (flippedCards.length === 2) {
+                moves++;
+                document.getElementById('moves').textContent = moves;
+                
+                const card1 = flippedCards[0];
+                const card2 = flippedCards[1];
+                
+                if (card1.dataset.symbol === card2.dataset.symbol) {
+                    // Match found
+                    setTimeout(() => {
+                        card1.classList.add('matched');
+                        card2.classList.add('matched');
+                        flippedCards = [];
+                        
+                        matchedPairs++;
+                        document.getElementById('matches').textContent = matchedPairs;
+                        
+                        // Check if game is complete
+                        if (matchedPairs === 8 && !gameCompleted) {
+                            gameCompleted = true;
+                            clearInterval(timerInterval);
+                            
+                            // Show reward notification
+                            const rewardNotification = document.getElementById('rewardNotification');
+                            rewardNotification.style.display = 'block';
+                            
+                            // Show the hidden reward message
+                            setTimeout(() => {
+                                const hiddenReward = document.getElementById('hiddenReward');
+                                hiddenReward.style.display = 'block';
+                                
+                                // Create confetti effect
+                                createConfetti();
+                                
+                                // Scroll to the reward message
+                                setTimeout(() => {
+                                    hiddenReward.scrollIntoView({ behavior: 'smooth' });
+                                }, 1000);
+                                
+                                // Show celebration message
+                                setTimeout(() => {
+                                    alert(`🎉 AMAZING! You completed the game in ${moves} moves and ${document.getElementById('timer').textContent} seconds!\n\nYou've unlocked a secret love message just for you! ❤️`);
+                                }, 500);
+                            }, 1000);
+                        }
+                    }, 500);
+                } else {
+                    // No match
+                    setTimeout(() => {
+                        card1.classList.remove('flipped');
+                        card2.classList.remove('flipped');
+                        card1.querySelector('span').style.display = 'none';
+                        card2.querySelector('span').style.display = 'none';
+                        flippedCards = [];
+                    }, 1000);
+                }
+            }
+        }
+        
+        function updateTimer() {
+            const currentTime = Math.floor((Date.now() - startTime) / 1000);
+            document.getElementById('timer').textContent = currentTime;
+        }
+        
+        // Confetti effect function
+        function createConfetti() {
+            const colors = ['#d63384', '#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3'];
+            
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                document.body.appendChild(confetti);
+                
+                // Animation
+                const animation = confetti.animate([
+                    { top: '0px', opacity: 1, transform: 'rotate(0deg)' },
+                    { top: '100vh', opacity: 0, transform: 'rotate(' + Math.random() * 360 + 'deg)' }
+                ], {
+                    duration: Math.random() * 3000 + 2000,
+                    easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
+                });
+                
+                // Remove confetti after animation
+                animation.onfinish = () => {
+                    confetti.remove();
+                };
+            }
+        }
+        
+        // Initialize game
+        initGame();
+        
+        // Restart game button
+        document.getElementById('restartGame').addEventListener('click', function() {
+            initGame();
+            // Hide the reward message when restarting
+            document.getElementById('hiddenReward').style.display = 'none';
+        });
+        
+        // Surprise love letter
+        document.getElementById('revealButton').addEventListener('click', function() {
+            const letter = document.getElementById('loveLetter');
+            if (letter.style.display === 'block') {
+                letter.style.display = 'none';
+                this.textContent = 'Open My Love Letter';
+            } else {
+                letter.style.display = 'block';
+                this.textContent = 'Close Letter';
+                
+                // Scroll to letter
+                letter.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Add smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
